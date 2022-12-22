@@ -1,5 +1,6 @@
-import "./AboutUs.scss";
-import AboutImage from "../../../../assets/images/gallery/about.png";
+import React from 'react';
+import './AboutUs.scss';
+import AboutImage from '../../../../assets/images/gallery/about.png';
 
 function AboutUs() {
   return (

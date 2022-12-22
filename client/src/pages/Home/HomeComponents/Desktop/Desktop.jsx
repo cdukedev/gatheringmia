@@ -1,6 +1,7 @@
-import Logo from "../../../../assets/logo/desktop-logo.png";
-import QRCode from "../../../../assets/icons/desktop_qr.png";
-import "./Desktop.scss";
+import React from 'react';
+import Logo from '../../../../assets/logo/desktop-logo.png';
+import QRCode from '../../../../assets/icons/desktop_qr.png';
+import './Desktop.scss';
 
 function Desktop() {
   return (

@@ -1,6 +1,7 @@
-import backButton from "../../assets/icons/map-back-button.svg";
-import "./BackButton.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import backButton from '../../assets/icons/map-back-button.svg';
+import './BackButton.scss';
 
 export default function BackButton() {
   return (

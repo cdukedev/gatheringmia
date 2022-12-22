@@ -1,5 +1,6 @@
-import "./TakePart.scss";
-import DeliveryImage from "../../../../assets/images/deliver.png";
+import React from 'react';
+import './TakePart.scss';
+import DeliveryImage from '../../../../assets/images/deliver.png';
 
 function TakePart() {
   return (
@@ -16,7 +17,7 @@ function TakePart() {
           you and delivering to the homes of elderly and disabled members of our
           community that are in need of food now. We appreciate you and your
           time, which is why we built this application that provides you with
-          the shortest delivery route so we may provide meals for more people.{" "}
+          the shortest delivery route so we may provide meals for more people.
           <br />
           <h3 className="take-part__list--header">
             You can now deliver in five easy steps.

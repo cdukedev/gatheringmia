@@ -1,13 +1,14 @@
-import "./Gallery.scss";
-import Image1 from "../../../../assets/images/gallery/image1.jpg";
-import Image2 from "../../../../assets/images/gallery/image2small.jpg";
-import Image3 from "../../../../assets/images/gallery/image3small.jpg";
-import Image4 from "../../../../assets/images/gallery/image4small.jpg";
-import Image5 from "../../../../assets/images/gallery/image5small.jpg";
-import Image6 from "../../../../assets/images/gallery/image6small.jpg";
-import Image7 from "../../../../assets/images/gallery/image7.jpg";
-import Image8 from "../../../../assets/images/gallery/image8small.jpg";
-import Image9 from "../../../../assets/images/gallery/image9.jpg";
+import React from 'react';
+import './Gallery.scss';
+import Image1 from '../../../../assets/images/gallery/image1.jpg';
+import Image2 from '../../../../assets/images/gallery/image2small.jpg';
+import Image3 from '../../../../assets/images/gallery/image3small.jpg';
+import Image4 from '../../../../assets/images/gallery/image4small.jpg';
+import Image5 from '../../../../assets/images/gallery/image5small.jpg';
+import Image6 from '../../../../assets/images/gallery/image6small.jpg';
+import Image7 from '../../../../assets/images/gallery/image7.jpg';
+import Image8 from '../../../../assets/images/gallery/image8small.jpg';
+import Image9 from '../../../../assets/images/gallery/image9.jpg';
 
 function Gallery() {
   return (
@@ -17,7 +18,11 @@ function Gallery() {
           <div className="gallery__column-one--image-container">
             <div className="gallery__column-one--text-box">
               <span className="gallery__column-one--text">
-                GATHERING <br /> FOOD
+                GATHERING
+                {' '}
+                <br />
+                {' '}
+                FOOD
               </span>
               <img
                 className="gallery__column-image"
@@ -31,12 +36,16 @@ function Gallery() {
           </div>
         </div>
         <div className="gallery__column-two">
-          <div className="gallery__column-two--image-container"></div>
+          <div className="gallery__column-two--image-container" />
           <img className="gallery__column-image" src={Image5} alt="Image5" />
           <img className="gallery__column-image" src={Image6} alt="Image6" />
           <div className="gallery__column-one--text-box">
             <span className="gallery__column-one--text">
-              GATHERING <br /> KNOWLEDGE
+              GATHERING
+              {' '}
+              <br />
+              {' '}
+              KNOWLEDGE
             </span>
             <img
               className="gallery__column-image"
@@ -49,7 +58,11 @@ function Gallery() {
       </div>
       <div className="gallery__column-one--text-box">
         <span className="gallery__column-one--text">
-          GATHERING <br /> TOGETHER
+          GATHERING
+          {' '}
+          <br />
+          {' '}
+          TOGETHER
         </span>
         <img
           className="gallery__column-one--image-9"

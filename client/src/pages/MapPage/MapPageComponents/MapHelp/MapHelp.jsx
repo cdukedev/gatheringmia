@@ -1,8 +1,9 @@
-import "./MapHelp.scss";
-import MapMenuArrow from "../../../../assets/icons/map-menu-arrow.svg";
-import FoodBank from "../../../../assets/icons/foodbank.svg";
-import CommunityGarden from "../../../../assets/icons/community-garden.svg";
-import Home from "../../../../assets/icons/home.svg";
+import React from 'react';
+import './MapHelp.scss';
+import MapMenuArrow from '../../../../assets/icons/map-menu-arrow.svg';
+import FoodBank from '../../../../assets/icons/foodbank.svg';
+import CommunityGarden from '../../../../assets/icons/community-garden.svg';
+
 function MapHelp(props) {
   return (
     <div className="map-help__container">
@@ -12,7 +13,7 @@ function MapHelp(props) {
           <img
             className="map-help__top-row--arrow"
             onClick={() => {
-              props.handleMenuClick("defaultMenu");
+              props.handleMenuClick('defaultMenu');
             }}
             src={MapMenuArrow}
             alt="menu arrow to close helper"

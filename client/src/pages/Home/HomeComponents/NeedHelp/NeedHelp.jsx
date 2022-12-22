@@ -1,5 +1,6 @@
-import "./NeedHelp.scss";
-import NeedHelpImage from "../../../../assets/images/NeedHelp.png";
+import React from 'react';
+import './NeedHelp.scss';
+import NeedHelpImage from '../../../../assets/images/NeedHelp.png';
 
 function NeedHelp() {
   return (

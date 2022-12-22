@@ -1,5 +1,5 @@
-import './MapFilter.scss';
 import React from 'react';
+import './MapFilter.scss';
 import MapMenuArrow from '../../../../assets/icons/map-menu-arrow.svg';
 import FilterOn from '../../../../assets/icons/filter-on.svg';
 import FilterOff from '../../../../assets/icons/filter-off.svg';

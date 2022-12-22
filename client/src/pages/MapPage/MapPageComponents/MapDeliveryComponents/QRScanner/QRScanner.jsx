@@ -1,11 +1,13 @@
-import QRScannerImage from "../../../../../assets/images/qr-scanner-image.png";
-import "./QRScanner.scss";
-import BackButton from "../../../../../Components/BackButton/BackButton.js";
+import React from 'react';
+import QRScannerImage from '../../../../../assets/images/qr-scanner-image.png';
+import './QRScanner.scss';
+import BackButton from '../../../../../Components/BackButton/BackButton';
+
 function QRScanner(props) {
   return (
     <>
       <div className="qr-scanner">
-        {/* add a qr code image, paragraph 1, paragraph 2 and a button with props.handleMenuClick when ready to deliver*/}
+        {/* add a qr code image, paragraph 1, paragraph 2 and a button with props.handleMenuClick when ready to deliver */}
         <img
           className="qr-scanner__image"
           src={QRScannerImage}
@@ -23,7 +25,7 @@ function QRScanner(props) {
         </div>
         <button
           className="qr-scanner__button"
-          onClick={() => props.handleMenuClick("deliveries")}
+          onClick={() => props.handleMenuClick('deliveries')}
         >
           Begin Deliveries
         </button>

@@ -1,9 +1,10 @@
-import "./MapMenu.scss";
-import homeButton from "../../../../assets/icons/map-home.svg";
-import helpButton from "../../../../assets/icons/map-help.svg";
-import filterButton from "../../../../assets/icons/map-filter.svg";
-import searchButton from "../../../../assets/icons/map-deliveries.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './MapMenu.scss';
+import { Link } from 'react-router-dom';
+import homeButton from '../../../../assets/icons/map-home.svg';
+import helpButton from '../../../../assets/icons/map-help.svg';
+import filterButton from '../../../../assets/icons/map-filter.svg';
+import searchButton from '../../../../assets/icons/map-deliveries.svg';
 
 function MapMenu(props) {
   return (
@@ -14,21 +15,21 @@ function MapMenu(props) {
         </Link>
         <img
           onClick={() => {
-            props.handleMenuClick("mapHelp");
+            props.handleMenuClick('mapHelp');
           }}
           src={helpButton}
           alt="help button"
         />
         <img
           onClick={() => {
-            props.handleMenuClick("mapFilter");
+            props.handleMenuClick('mapFilter');
           }}
           src={filterButton}
           alt="filter button"
         />
         <img
           onClick={() => {
-            props.handleMenuClick("mapDeliveries");
+            props.handleMenuClick('mapDeliveries');
           }}
           src={searchButton}
           alt="search button"
