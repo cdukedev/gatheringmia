@@ -1,7 +1,9 @@
-import "./MapFilter.scss";
-import MapMenuArrow from "../../../../assets/icons/map-menu-arrow.svg";
-import FilterOn from "../../../../assets/icons/filter-on.svg";
-import FilterOff from "../../../../assets/icons/filter-off.svg";
+import './MapFilter.scss';
+import React from 'react';
+import MapMenuArrow from '../../../../assets/icons/map-menu-arrow.svg';
+import FilterOn from '../../../../assets/icons/filter-on.svg';
+import FilterOff from '../../../../assets/icons/filter-off.svg';
+
 function MapFilter(props) {
   return (
     <div className="map-filter__container">
@@ -10,7 +12,7 @@ function MapFilter(props) {
           <img
             className="map-filter__top-row--arrow"
             onClick={() => {
-              props.handleMenuClick("defaultMenu");
+              props.handleMenuClick('defaultMenu');
             }}
             src={MapMenuArrow}
             alt="menu arrow to close helper"
@@ -20,8 +22,8 @@ function MapFilter(props) {
           <div
             className={
               props.foodBankToggle
-                ? "map-filter__bottom-container--items"
-                : "map-filter__bottom-container--items map-filter__bottom-container--items-off"
+                ? 'map-filter__bottom-container--items'
+                : 'map-filter__bottom-container--items map-filter__bottom-container--items-off'
             }
             onClick={() => {
               props.handleFoodBankToggle();
@@ -39,8 +41,8 @@ function MapFilter(props) {
           <div
             className={
               props.communityGardenToggle
-                ? "map-filter__bottom-container--items"
-                : "map-filter__bottom-container--items map-filter__bottom-container--items-off"
+                ? 'map-filter__bottom-container--items'
+                : 'map-filter__bottom-container--items map-filter__bottom-container--items-off'
             }
             onClick={() => {
               props.handleCommunityGardenToggle();

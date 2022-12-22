@@ -1,0 +1,8 @@
+Cypress (end-to-end testing)
+
+Jest (unit testing)
+
+Flow (static type checking)
+
+ESlint (linting)
+

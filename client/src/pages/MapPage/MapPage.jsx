@@ -1,3 +1,5 @@
+//@flow
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./MapPage.scss";
@@ -150,7 +152,7 @@ class MapPage extends React.Component {
         type: "Food Bank",
         zone: 2,
         phone: "(305) 770-1960",
-      }
+      },
     ],
     communityGardens: [
       {
