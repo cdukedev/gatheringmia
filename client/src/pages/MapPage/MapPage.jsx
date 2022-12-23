@@ -14,7 +14,7 @@ import QRScanner from './MapPageComponents/MapDeliveryComponents/QRScanner/QRSca
 import Splash from '../../Components/Splash/Splash';
 
 class MapPage extends React.Component {
-  state = {
+    state = {
     menu: 'defaultMenu',
     coords: null,
     zone: null,
@@ -1287,100 +1287,102 @@ class MapPage extends React.Component {
   };
 
   render() {
-    if (!this.state.coords) {
-      return <Splash />;
-    }
-    if (this.state.menu === 'mapDeliveries') {
-      return (
-        <div className="map-deliveries">
-          <Map
-            coords={this.state.coords}
-            foodBankToggle={this.state.foodBankToggle}
-            communityGardenToggle={this.state.communityGardenToggle}
-            deliveriesToggle={this.state.deliveriesToggle}
-            foodBanks={this.state.foodBanks}
-            height="calc(100vh - 280px)"
-          />
-          <MapDeliveries
-            handleDeliveryClick={this.handleDeliveryClick}
-            handleMenuClick={this.handleMenuClick}
-            foodBanks={this.state.foodBanks}
-            coords={this.state.coords}
-          />
-          <BackButton />
-        </div>
-      );
-    } if (this.state.menu === 'deliveries') {
-      return (
-        <div className="deliveries">
-          <Deliveries
-            handleMenuClick={this.handleMenuClick}
-            recipients={this.state.recipients}
-            coords={this.state.coords}
-            zone={this.state.zone}
-          />
-        </div>
-      );
-    } if (this.state.menu === 'mapHelp') {
-      return (
-        <div className="map-help">
-          <Map
-            coords={this.state.coords}
-            foodBankToggle={this.state.foodBankToggle}
-            communityGardenToggle={this.state.communityGardenToggle}
-            deliveriesToggle={this.state.deliveriesToggle}
-            foodBanks={this.state.foodBanks}
-            communityGardens={this.state.communityGardens}
-            deliveryLocations={this.state.deliveryLocations}
-            height="calc(100vh - 135px)"
-          />
-          <MapHelp handleMenuClick={this.handleMenuClick} />
-          <BackButton />
-        </div>
-      );
-    } if (this.state.menu === 'mapFilter') {
-      return (
-        <div className="map-filter">
-          <Map
-            coords={this.state.coords}
-            foodBankToggle={this.state.foodBankToggle}
-            communityGardenToggle={this.state.communityGardenToggle}
-            deliveriesToggle={this.state.deliveriesToggle}
-            initialMarkers={this.state.initialMarkers}
-            height="calc(100vh - 125px)"
-          />
-          <MapFilter
-            foodBankToggle={this.state.foodBankToggle}
-            communityGardenToggle={this.state.communityGardenToggle}
-            handleFoodBankToggle={this.handleFoodBankToggle}
-            handleCommunityGardenToggle={this.handleCommunityGardenToggle}
-            handleMenuClick={this.handleMenuClick}
-          />
-          <BackButton />
-        </div>
-      );
-    } if (this.state.menu === 'defaultMenu') {
-      return (
-        <div className="map-container">
-          <Map
-            coords={this.state.coords}
-            foodBankToggle={this.state.foodBankToggle}
-            communityGardenToggle={this.state.communityGardenToggle}
-            deliveriesToggle={this.state.homeToggle}
-            initialMarkers={this.state.initialMarkers}
-            height="calc(100vh - 50px)"
-          />
-          <MapMenu handleMenuClick={this.handleMenuClick} />
-          <BackButton />
-        </div>
-      );
-    } if (this.state.menu === 'qrScanner') {
-      return (
-        <div className="QR-scanner">
-          <QRScanner handleMenuClick={this.handleMenuClick} />
-        </div>
-      );
-    }
-  }
+    return <Splash />;
+  //   if (!this.state.coords) {
+  //     return <Splash />;
+  //   }
+  //   if (this.state.menu === 'mapDeliveries') {
+  //     return (
+  //       <div className="map-deliveries">
+  //         <Map
+  //           coords={this.state.coords}
+  //           foodBankToggle={this.state.foodBankToggle}
+  //           communityGardenToggle={this.state.communityGardenToggle}
+  //           deliveriesToggle={this.state.deliveriesToggle}
+  //           foodBanks={this.state.foodBanks}
+  //           height="calc(100vh - 280px)"
+  //         />
+  //         <MapDeliveries
+  //           handleDeliveryClick={this.handleDeliveryClick}
+  //           handleMenuClick={this.handleMenuClick}
+  //           foodBanks={this.state.foodBanks}
+  //           coords={this.state.coords}
+  //         />
+  //         <BackButton />
+  //       </div>
+  //     );
+  //   } if (this.state.menu === 'deliveries') {
+  //     return (
+  //       <div className="deliveries">
+  //         <Deliveries
+  //           handleMenuClick={this.handleMenuClick}
+  //           recipients={this.state.recipients}
+  //           coords={this.state.coords}
+  //           zone={this.state.zone}
+  //         />
+  //       </div>
+  //     );
+  //   } if (this.state.menu === 'mapHelp') {
+  //     return (
+  //       <div className="map-help">
+  //         <Map
+  //           coords={this.state.coords}
+  //           foodBankToggle={this.state.foodBankToggle}
+  //           communityGardenToggle={this.state.communityGardenToggle}
+  //           deliveriesToggle={this.state.deliveriesToggle}
+  //           foodBanks={this.state.foodBanks}
+  //           communityGardens={this.state.communityGardens}
+  //           deliveryLocations={this.state.deliveryLocations}
+  //           height="calc(100vh - 135px)"
+  //         />
+  //         <MapHelp handleMenuClick={this.handleMenuClick} />
+  //         <BackButton />
+  //       </div>
+  //     );
+  //   } if (this.state.menu === 'mapFilter') {
+  //     return (
+  //       <div className="map-filter">
+  //         <Map
+  //           coords={this.state.coords}
+  //           foodBankToggle={this.state.foodBankToggle}
+  //           communityGardenToggle={this.state.communityGardenToggle}
+  //           deliveriesToggle={this.state.deliveriesToggle}
+  //           initialMarkers={this.state.initialMarkers}
+  //           height="calc(100vh - 125px)"
+  //         />
+  //         <MapFilter
+  //           foodBankToggle={this.state.foodBankToggle}
+  //           communityGardenToggle={this.state.communityGardenToggle}
+  //           handleFoodBankToggle={this.handleFoodBankToggle}
+  //           handleCommunityGardenToggle={this.handleCommunityGardenToggle}
+  //           handleMenuClick={this.handleMenuClick}
+  //         />
+  //         <BackButton />
+  //       </div>
+  //     );
+  //   } if (this.state.menu === 'defaultMenu') {
+  //     return (
+  //       <div className="map-container">
+  //         <Map
+  //           coords={this.state.coords}
+  //           foodBankToggle={this.state.foodBankToggle}
+  //           communityGardenToggle={this.state.communityGardenToggle}
+  //           deliveriesToggle={this.state.homeToggle}
+  //           initialMarkers={this.state.initialMarkers}
+  //           height="calc(100vh - 50px)"
+  //         />
+  //         <MapMenu handleMenuClick={this.handleMenuClick} />
+  //         <BackButton />
+  //       </div>
+  //     );
+  //   } if (this.state.menu === 'qrScanner') {
+  //     return (
+  //       <div className="QR-scanner">
+  //         <QRScanner handleMenuClick={this.handleMenuClick} />
+  //       </div>
+  //     );
+  //   }
+  // }
+}
 }
 export default MapPage;
