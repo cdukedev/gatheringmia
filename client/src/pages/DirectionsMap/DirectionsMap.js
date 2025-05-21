@@ -50,13 +50,22 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [directionText, setDirectionText] = useState("");
   const [timeoutId, setTimeoutId] = useState(null);
-  const google = window.google;
+  const [googleMapsReady, setGoogleMapsReady] = useState(false);
+  const [googleObj, setGoogleObj] = useState(null);
 
   const mapRef = useRef(null);
 
   useEffect(() => {
-    // Check if mapRef exists and directions have not been fetched yet
-    if (mapRef.current && !directions) {
+    // This effect only runs on the client side
+    if (typeof window !== 'undefined' && window.google) {
+      setGoogleMapsReady(true);
+      setGoogleObj(window.google);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Check if mapRef exists, google is ready, and directions have not been fetched yet
+    if (mapRef.current && googleMapsReady && googleObj && !directions) {
       // Create a request object with origin, destination, and travel mode
       const request = {
         origin: center, // @params center: string - The coordinates of the map's center
@@ -67,10 +76,10 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
         travelMode: "DRIVING", // Set travel mode to driving
       };
       // Use Google Maps DirectionsService to fetch directions based on the request
-      new google.maps.DirectionsService().route(request, directionsCallback);
+      new googleObj.maps.DirectionsService().route(request, directionsCallback);
       // @stateChange directions: object - The fetched directions object
     }
-  }, [directions, center, destinationLat, destinationLng]); // @dependencies directions, center, destinationLat, destinationLng
+  }, [googleMapsReady, googleObj, directions, center, destinationLat, destinationLng]); // @dependencies directions, center, destinationLat, destinationLng
 
   useEffect(() => {
     // Check if mapRef exists and watchId has not been set yet
@@ -171,17 +180,19 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
    * @dependencies google, google.maps.LatLng, google.maps.Marker, google.maps.Size
    */
   const updateCarMarker = (position) => {
+    if (!googleMapsReady || !googleObj) return;
+    
     if (carMarker) {
       // If a car marker already exists, update its position
       carMarker.setPosition(position);
     } else {
       // If no car marker exists, create a new one and set it as the car marker
-      const newMarker = new google.maps.Marker({
+      const newMarker = new googleObj.maps.Marker({
         position,
         map: mapRef.current,
         icon: {
           url: "https://images.vexels.com/media/users/3/154573/isolated/preview/bd08e000a449288c914d851cb9dae110-hatchback-car-top-view-silhouette-by-vexels.png",
-          scaledSize: new google.maps.Size(20, 20),
+          scaledSize: new googleObj.maps.Size(20, 20),
           anchor: { x: 10, y: 10 },
         },
       });
@@ -242,31 +253,31 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
    * @returns {void}
    */
   const speakDirections = (text) => {
-    if ("speechSynthesis" in window) {
-      const cleanText = text.replace(/<[^>]*>?/gm, ""); // Remove any HTML tags
-
-      const synth = window.speechSynthesis;
-      console.log("Speaking direction:", cleanText); // Log the spoken direction
-
-      const utterance = new SpeechSynthesisUtterance(cleanText);
-      synth.speak(utterance);
-
-      // Set the direction text and remove it after 8 seconds
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      setDirectionText(cleanText);
-
-      const id = setTimeout(() => {
-        setDirectionText("");
-      }, 8000);
-
-      setTimeoutId(id);
-    } else {
-      console.error(
-        "Text-to-speech is not supported in this browser or device"
-      );
+    // Only execute if running on the client and speechSynthesis is available
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      console.error("Text-to-speech is not supported in this environment");
+      return;
     }
+    
+    const cleanText = text.replace(/<[^>]*>?/gm, ""); // Remove any HTML tags
+
+    const synth = window.speechSynthesis;
+    console.log("Speaking direction:", cleanText); // Log the spoken direction
+
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    synth.speak(utterance);
+
+    // Set the direction text and remove it after 8 seconds
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    setDirectionText(cleanText);
+
+    const id = setTimeout(() => {
+      setDirectionText("");
+    }, 8000);
+
+    setTimeoutId(id);
   };
 
   /**
@@ -322,8 +333,8 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
     }, 8000);
     setTimeoutId(id);
 
-    // Speak directions if not already speaking
-    if (!window.speechSynthesis.speaking) {
+    // Speak directions if not already speaking and speech synthesis is available
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window && !window.speechSynthesis.speaking) {
       speakDirections(initialMessage);
     }
   };
@@ -339,6 +350,11 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
   const handleMapLoad = (map) => {
     // Set the map reference
     mapRef.current = map;
+    
+    if (typeof window !== 'undefined' && window.google) {
+      setGoogleMapsReady(true);
+      setGoogleObj(window.google);
+    }
 
     // Check if geolocation tracking is already active
     if (!watchId) {
@@ -392,13 +408,13 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
             lng: parseFloat(destinationLng),
           }}
         />
-        {directions && (
+        {directions && googleMapsReady && googleObj && (
           <MarkerComponent
             position={userPosition}
             icon={{
               url: "https://images.vexels.com/media/users/3/154573/isolated/preview/bd08e000a449288c914d851cb9dae110-hatchback-car-top-view-silhouette-by-vexels.png",
-              scaledSize: new window.google.maps.Size(20, 20),
-              anchor: new window.google.maps.Point(10, 10),
+              scaledSize: googleObj ? new googleObj.maps.Size(20, 20) : null,
+              anchor: googleObj ? new googleObj.maps.Point(10, 10) : null,
             }}
           />
         )}

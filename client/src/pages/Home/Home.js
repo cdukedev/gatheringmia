@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
 import NavMenu from "../../Components/HomeComponents/NavMenu/NavMenu";
 import Footer from "../../Components/HomeComponents/Footer/Footer";
@@ -11,10 +11,29 @@ import Desktop from "../../Components/HomeComponents/Desktop/Desktop";
 
 function Home() {
   const [navMenu, setNavMenu] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  
+  useEffect(() => {
+    // This code only runs on the client after the component mounts
+    setIsDesktop(window.innerWidth > 680);
+    
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 680);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   const handleNavMenu = () => {
     setNavMenu(!navMenu);
   };
-  if (window.innerWidth > 680) {
+  
+  if (isDesktop) {
     return <Desktop />;
   } else {
     return (
@@ -32,4 +51,5 @@ function Home() {
     );
   }
 }
+
 export default Home;
