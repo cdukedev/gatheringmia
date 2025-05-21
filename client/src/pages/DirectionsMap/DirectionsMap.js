@@ -6,12 +6,28 @@ import { RecipientContext } from "../../contexts/RecipientContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import {
-  GoogleMap,
-  LoadScript,
-  DirectionsRenderer,
-  Marker,
-} from "@react-google-maps/api";
+import dynamic from 'next/dynamic';
+
+// Import dynamic Google Maps components with SSR disabled
+const GoogleMapComponent = dynamic(
+  () => import('@react-google-maps/api').then(module => module.GoogleMap),
+  { ssr: false }
+);
+
+const LoadScriptComponent = dynamic(
+  () => import('@react-google-maps/api').then(module => module.LoadScript),
+  { ssr: false }
+);
+
+const DirectionsRendererComponent = dynamic(
+  () => import('@react-google-maps/api').then(module => module.DirectionsRenderer),
+  { ssr: false }
+);
+
+const MarkerComponent = dynamic(
+  () => import('@react-google-maps/api').then(module => module.Marker),
+  { ssr: false }
+);
 
 // *****************************************************
 // NEED TO REFACTOR THIS PAGE AND PUT UTILS INTO A SEPARATE FILE
@@ -356,28 +372,28 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
   }
 
   return (
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_API_KEY}>
-      <GoogleMap
+    <LoadScriptComponent googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}>
+      <GoogleMapComponent
         mapContainerStyle={containerStyle}
         options={mapOptions}
         onLoad={handleMapLoad}
       >
         {directions && (
-          <DirectionsRenderer
+          <DirectionsRendererComponent
             options={{
               directions,
               suppressMarkers: true,
             }}
           />
         )}
-        <Marker
+        <MarkerComponent
           position={{
             lat: parseFloat(destinationLat),
             lng: parseFloat(destinationLng),
           }}
         />
         {directions && (
-          <Marker
+          <MarkerComponent
             position={userPosition}
             icon={{
               url: "https://images.vexels.com/media/users/3/154573/isolated/preview/bd08e000a449288c914d851cb9dae110-hatchback-car-top-view-silhouette-by-vexels.png",
@@ -386,7 +402,7 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
             }}
           />
         )}
-      </GoogleMap>
+      </GoogleMapComponent>
       {directionText && (
         <div className={`direction-box ${!directionText ? "fadeOut" : ""}`}>
           {directionText}
