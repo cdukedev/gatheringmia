@@ -7,9 +7,6 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  env: {
-    NEXT_PUBLIC_GOOGLE_API_KEY: process.env.REACT_APP_GOOGLE_API_KEY,
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
