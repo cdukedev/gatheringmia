@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavMenu.scss";
+import styles from "./NavMenu.module.scss";
 import NavButton from "../../../assets/icons/nav-button.svg";
 import { useHandleMenuItemClick } from "../../../hooks/useHandleMenuItemClick.js";
 import NavMenuItem from "./NavMenuItem";
@@ -9,11 +9,11 @@ function NavMenu({ handleNavMenu, navMenu }) {
 
   if (!navMenu) {
     return (
-      <div className="nav-menu nav-menu-off">
-        <div className="nav-menu__button-container">
+      <div className={`${styles["nav-menu"]} ${styles["nav-menu-off"]}`}>
+        <div className={styles["nav-menu__button-container"]}>
           <img
             onClick={handleNavMenu}
-            className="nav-menu__button"
+            className={styles["nav-menu__button"]}
             src={NavButton}
             alt="nav-button"
           />
@@ -23,16 +23,16 @@ function NavMenu({ handleNavMenu, navMenu }) {
   } else {
     return (
       <>
-        <div className="nav">
-          <div className="nav-menu">
-            <div className="nav-menu__button-container" onClick={handleNavMenu}>
+        <div className={styles.nav}>
+          <div className={styles["nav-menu"]}>
+            <div className={styles["nav-menu__button-container"]} onClick={handleNavMenu}>
               <img
-                className="nav-menu__button"
+                className={styles["nav-menu__button"]}
                 src={NavButton}
                 alt="nav-button"
               />
             </div>
-            <div className="nav-menu__items">
+            <div className={styles["nav-menu__items"]}>
               <NavMenuItem label="DELIVER FOOD" to="/map" />
               <NavMenuItem label="FIND RESOURCES" to="/map" />
               <NavMenuItem
@@ -61,6 +61,9 @@ function NavMenu({ handleNavMenu, navMenu }) {
       </>
     );
   }
+}
+
+export default NavMenu;
 }
 
 export default NavMenu;
