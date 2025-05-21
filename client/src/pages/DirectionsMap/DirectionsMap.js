@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import "./DirectionsMap.scss";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { useNextNavigation } from "../../utils/navigation";
 import { RecipientContext } from "../../contexts/RecipientContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,9 +17,8 @@ import {
 // NEED TO REFACTOR THIS PAGE AND PUT UTILS INTO A SEPARATE FILE
 // *****************************************************
 
-const DirectionsMap = () => {
-  const navigate = useNavigate();
-  const { userLat, userLng, destinationLat, destinationLng } = useParams();
+const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => {
+  const { navigate } = useNextNavigation();
   const { sortedRecipients, setSortedRecipients, currentRecipient } =
     useContext(RecipientContext);
   const [hasCallbackRun, setHasCallbackRun] = useState(false);
@@ -402,7 +402,7 @@ const DirectionsMap = () => {
         </button>
       )}
       {!currentRecipient && (
-        <Link to="/deliver">
+        <Link href="/deliver">
           <button className="arrived-button">Arrived</button>
         </Link>
       )}
