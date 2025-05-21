@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import QRScannerImage from "../../../../assets/images/qr-scanner-image.png";
 import "./QRScanner.scss";
 import BackButton from "../../../../Components/BackButton/BackButton.js";
@@ -26,7 +26,7 @@ function QRScanner() {
             your deliveries.
           </p>
         </div>
-        <Link to="/deliveries">
+        <Link href="/deliveries">
           <button className="qr-scanner__button">Begin Deliveries</button>
         </Link>
       </div>

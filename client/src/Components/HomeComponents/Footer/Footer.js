@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import ContactSection from "./ContactSection/ContactSection";
 import "./Footer.scss";
@@ -31,7 +31,7 @@ function Footer() {
           />
         ))}
         <Link
-          to="/"
+          href="/"
           onClick={() => scrollToElement("top")} // Add the onClick event handler here
           data-testid="contact-link"
           className="contact__content-3 contact__content-bottom contact__content-bottom--link"

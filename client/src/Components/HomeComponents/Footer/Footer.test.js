@@ -1,5 +1,4 @@
 import React from "react";
-import { MemoryRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import { within } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
@@ -7,14 +6,15 @@ import Footer from "./Footer";
 import socialLinksData from "../../../data/socialLinks.json";
 import contactSectionsData from "../../../data/contactSection.json";
 
+// Mock next/link
+jest.mock('next/link', ({ children, href }) => {
+  return React.cloneElement(children, { href });
+});
+
 describe("Footer component", () => {
   beforeEach(() => {
     // eslint-disable-next-line testing-library/no-render-in-setup
-    render(
-      <MemoryRouter>
-        <Footer />
-      </MemoryRouter>
-    );
+    render(<Footer />);
   });
 
   test("renders Get in Touch title", () => {

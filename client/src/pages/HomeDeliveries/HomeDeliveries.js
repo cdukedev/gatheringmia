@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import "./HomeDeliveries.scss";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { RecipientContext } from "../../contexts/RecipientContext";
 import { GeolocationContext } from "../../contexts/GeolocationContext";
 import HomeDeliveriesSplash from "./HomeDeliveriesSplash";
@@ -20,7 +20,7 @@ function HomeDeliveries() {
 
   const [loading, setLoading] = useState(true);
 
-  const Navigate = useNavigate();
+  const router = useRouter();
 
   // Context
   const { handleGeolocationRequest, coords } = useContext(GeolocationContext);
@@ -69,7 +69,7 @@ function HomeDeliveries() {
     setSortedRecipients([]);
     setLoading(true);
     setCurrentRecipient(null);
-    Navigate("/");
+    router.push("/");
   };
 
   if (currentRecipient && !sortedRecipients.length) {

@@ -5,7 +5,7 @@ import { MapPageContext } from "../../../contexts/MapPageContext";
 import { GeolocationContext } from "../../../contexts/GeolocationContext";
 import { RecipientContext } from "../../../contexts/RecipientContext";
 import { FoodBankContext } from "../../../contexts/FoodBankContext";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 function FoodBankChoice() {
   const { handleMenuClick } = useContext(MapPageContext);
@@ -13,7 +13,7 @@ function FoodBankChoice() {
   const { foodBanks } = useContext(FoodBankContext); // Consume FoodBankContext
   const { handleDeliveryClick } = useContext(RecipientContext);
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const calculateDistance = (centerLocation, foodBank) => {
     const { lat, lng } = centerLocation;
@@ -91,7 +91,7 @@ function FoodBankChoice() {
                       className="map-deliveries__top-row--food-bank-right--directions"
                       onClick={() => {
                         handleDeliveryClick("qrScanner", foodBank.zone);
-                        navigate(
+                        router.push(
                           `/directions/${coords.lat}/${coords.lng}/${foodBank.position.lat}/${foodBank.position.lng}`
                         );
                       }}

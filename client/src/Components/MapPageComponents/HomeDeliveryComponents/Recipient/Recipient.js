@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { RecipientContext } from "../../../../contexts/RecipientContext";
 
 function Recipient({ recipient, coords }) {
-  const navigate = useNavigate();
+  const router = useRouter();
   const { setCurrentRecipient } = useContext(RecipientContext);
 
   const handleRecipientClick = (e) => {
@@ -21,7 +21,7 @@ function Recipient({ recipient, coords }) {
       window.open(mapsUrl, "_blank");
     }
 
-    navigate(
+    router.push(
       `/directions/${coords.lat}/${coords.lng}/${recipient.position.lat}/${recipient.position.lng}`
     );
   };
