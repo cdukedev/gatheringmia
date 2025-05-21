@@ -53,13 +53,3 @@ function Home() {
 }
 
 export default Home;
-        <AboutUs />
-        <TakePart />
-        <NeedHelp />
-        <Footer />
-      </div>
-    );
-  }
-}
-
-export default Home;
