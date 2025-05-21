@@ -1,0 +1,50 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+  
+    &__columns {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      justify-content: space-evenly;
+      margin: 5vw 0;
+    }
+  
+    &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 45%;
+      margin: 0;
+      gap: 2vw;
+    }
+  
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+        align-items: center;
+      &-image {
+        border-radius: 15%;
+        width: 45vw;
+  
+        &-9 {
+          width: 94vw;
+          border-radius: 25px;
+          font-size: 2.25rem;
+          overflow: hidden;
+          perspective: 1px;
+          z-index: -1;
+        }
+      }
+  
+      &-text {
+        position: absolute;
+        text-align: center;
+        color: #df8363;
+        font-size: 1.35rem;
+        font-weight: bold;
+        z-index: 0;
+      }
+    }
+  }
