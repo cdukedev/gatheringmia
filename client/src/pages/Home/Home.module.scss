@@ -1,0 +1,16 @@
+.home{
+    &__hr{
+        margin-top:15vw;
+        margin-bottom:9vw;
+        border-color: silver;
+        border-top: none;
+        width:100vw
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__logo{
+        width: 92vw;
+        padding-top: 4vw;
+    }
+}

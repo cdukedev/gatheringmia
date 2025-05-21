@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import QRScannerImage from "../../../../assets/images/qr-scanner-image.png";
-import "./QRScanner.scss";
+import styles from "./QRScanner.module.scss";
 import BackButton from "../../../../Components/BackButton/BackButton.js";
 
 function QRScanner() {
@@ -9,25 +9,25 @@ function QRScanner() {
 
   return (
     <>
-      <div className="qr-scanner">
+      <div className={styles["qr-scanner"]}>
         {/* add a qr code image, paragraph 1, paragraph 2 and a button with props.handleMenuClick when ready to deliver*/}
         <img
-          className="qr-scanner__image"
+          className={styles["qr-scanner__image"]}
           src={QRScannerImage}
           alt="qr code scanner"
         />
-        <div className="qr-scanner__text-container">
-          <p className="qr-scanner__text">
+        <div className={styles["qr-scanner__text-container"]}>
+          <p className={styles["qr-scanner__text"]}>
             Scan the QR code with a Food Bank team member to recieve the boxes
             for delivery.
           </p>
-          <p className="qr-scanner__text">
+          <p className={styles["qr-scanner__text"]}>
             Once you have recieved the boxes, click the button below to begin
             your deliveries.
           </p>
         </div>
-        <Link to="/deliveries">
-          <button className="qr-scanner__button">Begin Deliveries</button>
+        <Link href="/deliveries">
+          <button className={styles["qr-scanner__button"]}>Begin Deliveries</button>
         </Link>
       </div>
       <BackButton />

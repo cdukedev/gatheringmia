@@ -1,0 +1,37 @@
+.take-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    gap: 5vw;
+    padding: 5vw 5vw 15vw 5vw;
+    width: 94vw;
+    background-color: #E6E0D6;
+    border-radius: 15px;
+    &__title{
+        color: #2C3A49;
+        padding-top: 10vw;
+        padding-bottom: 3vw;
+        font-size: 2.5rem;
+    }
+    &__image{
+        border-radius: 15px;
+        width: 75vw;
+        margin-bottom: 3vw;
+    }
+    &__list{
+        text-align: left;
+        &--header{
+            margin:4vh 0 2vh 0;
+        }
+    }
+    &__text{
+        color: #2C3A49;
+        padding: 4vw;
+        font-size: 1.15rem;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        width: 75vw;
+    }
+}

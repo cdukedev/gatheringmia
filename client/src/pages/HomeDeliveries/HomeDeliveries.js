@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
-import "./HomeDeliveries.scss";
-import { useNavigate } from "react-router-dom";
+import styles from "./HomeDeliveries.module.scss";
+import { useRouter } from "next/router";
 import { RecipientContext } from "../../contexts/RecipientContext";
 import { GeolocationContext } from "../../contexts/GeolocationContext";
 import HomeDeliveriesSplash from "./HomeDeliveriesSplash";
@@ -20,7 +20,7 @@ function HomeDeliveries() {
 
   const [loading, setLoading] = useState(true);
 
-  const Navigate = useNavigate();
+  const router = useRouter();
 
   // Context
   const { handleGeolocationRequest, coords } = useContext(GeolocationContext);
@@ -69,24 +69,24 @@ function HomeDeliveries() {
     setSortedRecipients([]);
     setLoading(true);
     setCurrentRecipient(null);
-    Navigate("/");
+    router.push("/");
   };
 
   if (currentRecipient && !sortedRecipients.length) {
     return (
-      <div className="amazing__container">
+      <div className={styles.amazing__container}>
         <button
-          className="top-row-button"
+          className={styles["top-row-button"]}
           onClick={handleFinishedDeliveryClick}
         >
-          <p className="top-row-button--text">
+          <p className={styles["top-row-button--text"]}>
             Thank you so much on behalf of those in our community for delivering
             today! Click Here to confirm that all deliveries have been
             completed.
           </p>
         </button>
         <img
-          className="amazing__container-image"
+          className={styles["amazing__container-image"]}
           src="https://i.imgur.com/RdppHIt.jpg"
           alt=""
         />
@@ -98,12 +98,12 @@ function HomeDeliveries() {
     return <HomeDeliveriesSplash />;
   } else {
     return (
-      <div className="deliveries__container">
+      <div className={styles.deliveries__container}>
         <ToastContainer />
-        <h3 className="deliveries__top-row--header">
+        <h3 className={styles["deliveries__top-row--header"]}>
           Deliver in the order given for the shortest total trip.
         </h3>
-        <div className="deliveries__top-row--recipient--container">
+        <div className={styles["deliveries__top-row--recipient--container"]}>
           <RecipientsList coords={coords} />
         </div>
       </div>

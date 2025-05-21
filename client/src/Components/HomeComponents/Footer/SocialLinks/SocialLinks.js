@@ -2,7 +2,7 @@ import React from "react";
 import facebook from "../../../../assets/icons/facebook.svg";
 import instagram from "../../../../assets/icons/instagram.svg";
 import twitter from "../../../../assets/icons/twitter.svg";
-import "./SocialLinks.scss";
+import styles from "./SocialLinks.module.scss";
 
 const getImageSource = (src) => {
   switch (src) {
@@ -19,19 +19,19 @@ const getImageSource = (src) => {
 
 const SocialLinks = ({ links }) => {
   return (
-    <div className="contact__social-links">
+    <div className={styles["contact__social-links"]}>
       {links.map(({ href, src, alt }) => {
         const imageSource = getImageSource(src);
 
         return (
           <a
             key={alt}
-            className="contact__social-link"
+            className={styles["contact__social-link"]}
             href={href}
             data-testid={`social-link-${src}`}
           >
             <img
-              className="contact__social-link-image"
+              className={styles["contact__social-link-image"]}
               src={imageSource}
               alt={alt}
             />

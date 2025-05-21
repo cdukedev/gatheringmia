@@ -1,0 +1,17 @@
+.map-menu{
+    &__container{
+    background-image: url(../../../assets/images/map-menu-bar.svg);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 72px;
+    background-size: cover;
+}
+    &__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+}
