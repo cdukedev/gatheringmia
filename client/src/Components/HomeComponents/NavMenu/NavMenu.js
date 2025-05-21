@@ -64,6 +64,3 @@ function NavMenu({ handleNavMenu, navMenu }) {
 }
 
 export default NavMenu;
-}
-
-export default NavMenu;

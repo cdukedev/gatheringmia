@@ -73,5 +73,3 @@ function MapFilter() {
 }
 
 export default MapFilter;
-
-export default MapFilter;

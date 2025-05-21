@@ -422,7 +422,7 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
           <button className={styles["arrived-button"]}>Arrived</button>
         </Link>
       )}
-    </LoadScript>
+    </LoadScriptComponent>
   );
 };
 
