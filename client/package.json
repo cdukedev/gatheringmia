@@ -9,13 +9,11 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
-    "create-react-app": "^5.0.1",
     "fs": "^0.0.1-security",
     "google-map-react": "^2.2.0",
+    "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-spinners": "^0.13.8",
     "react-test-renderer": "^18.2.0",
@@ -25,16 +23,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "jest",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build"
+    "lint": "next lint"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "next/core-web-vitals"
     ]
   },
   "browserslist": {
@@ -59,6 +56,8 @@
     "babel-jest": "^29.5.0",
     "cypress": "^10.6.0",
     "enzyme": "^3.11.0",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.4.19",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "jest-transform-stub": "^2.0.0"
