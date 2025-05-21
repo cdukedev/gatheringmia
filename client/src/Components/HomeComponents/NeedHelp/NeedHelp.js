@@ -1,15 +1,18 @@
 import React from "react";
 import styles from "./NeedHelp.module.scss";
 import NeedHelpImage from "../../../assets/images/NeedHelp.png";
+import Image from "next/image";
 
 function NeedHelp() {
   return (
     <div id="NeedHelp" className={styles["need-help"]}>
       <h1 className={styles["need-help__title"]}>Do you need food?</h1>
-      <img
+      <Image
         className={styles["need-help__image"]}
         src={NeedHelpImage}
         alt="people sharing food together"
+        width={300}
+        height={200}
       />
       <div className={styles["need-help__text-container"]}>
         <p className={styles["need-help__text"]}>

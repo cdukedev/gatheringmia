@@ -13,7 +13,6 @@ jest.mock('next/link', ({ children, href }) => {
 
 describe("Footer component", () => {
   beforeEach(() => {
-    // eslint-disable-next-line testing-library/no-render-in-setup
     render(<Footer />);
   });
 
