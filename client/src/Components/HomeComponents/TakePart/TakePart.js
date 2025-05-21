@@ -1,18 +1,15 @@
 import React from "react";
 import styles from "./TakePart.module.scss";
 import DeliveryImage from "../../../assets/images/deliver.png";
-import Image from "next/image";
 
 function TakePart() {
   return (
     <div id="TakePart" className={styles["take-part"]}>
       <h1 className={styles["take-part__title"]}>How Can I Help?</h1>
-      <Image
+      <img
         className={styles["take-part__image"]}
         src={DeliveryImage}
         alt="people sharing food together"
-        width={300}
-        height={200}
       />
       <div className={styles["take-part__text-container"]}>
         <p className={styles["take-part__text"]}>

@@ -8,7 +8,6 @@ import Logo from "../../assets/logo/logo.svg";
 import TakePart from "../../Components/HomeComponents/TakePart/TakePart";
 import NeedHelp from "../../Components/HomeComponents/NeedHelp/NeedHelp";
 import Desktop from "../../Components/HomeComponents/Desktop/Desktop";
-import Image from "next/image";
 
 function Home() {
   const [navMenu, setNavMenu] = useState(false);
@@ -40,10 +39,20 @@ function Home() {
     return (
       <div className={styles.home} data-test="home">
         <NavMenu navMenu={navMenu} handleNavMenu={handleNavMenu} />
-        <Image className={styles.home__logo} src={Logo} alt="logo" width={150} height={150} />
+        <img className={styles.home__logo} src={Logo} alt="logo" />
         <Gallery />
 
         <hr className={styles.home__hr} />
+        <AboutUs />
+        <TakePart />
+        <NeedHelp />
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default Home;
         <AboutUs />
         <TakePart />
         <NeedHelp />

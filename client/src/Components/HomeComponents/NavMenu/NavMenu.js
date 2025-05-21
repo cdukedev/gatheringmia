@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./NavMenu.module.scss";
 import { useHandleMenuItemClick } from "../../../hooks/useHandleMenuItemClick.js";
 import NavMenuItem from "./NavMenuItem";
-import Image from "next/image";
 import NavButton from "../../../assets/icons/nav-button.svg";
 
 function NavMenu({ handleNavMenu, navMenu }) {
@@ -12,13 +11,11 @@ function NavMenu({ handleNavMenu, navMenu }) {
     return (
       <div className={`${styles["nav-menu"]} ${styles["nav-menu-off"]}`}>
         <div className={styles["nav-menu__button-container"]}>
-          <Image
+          <img
             onClick={handleNavMenu}
             className={styles["nav-menu__button"]}
             src={NavButton}
             alt="nav-button"
-            width={24}
-            height={24}
           />
         </div>
       </div>
@@ -29,12 +26,10 @@ function NavMenu({ handleNavMenu, navMenu }) {
         <div className={styles.nav}>
           <div className={styles["nav-menu"]}>
             <div className={styles["nav-menu__button-container"]} onClick={handleNavMenu}>
-              <Image
+              <img
                 className={styles["nav-menu__button"]}
                 src={NavButton}
                 alt="nav-button"
-                width={24}
-                height={24}
               />
             </div>
             <div className={styles["nav-menu__items"]}>
@@ -67,5 +62,7 @@ function NavMenu({ handleNavMenu, navMenu }) {
     );
   }
 }
+
+export default NavMenu;
 
 export default NavMenu;
