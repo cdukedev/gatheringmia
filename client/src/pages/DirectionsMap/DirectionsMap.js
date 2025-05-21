@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
-import "./DirectionsMap.scss";
+import styles from "./DirectionsMap.module.scss";
 import Link from "next/link";
 import { useNextNavigation } from "../../utils/navigation";
 import { RecipientContext } from "../../contexts/RecipientContext";
@@ -404,14 +404,14 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
         )}
       </GoogleMapComponent>
       {directionText && (
-        <div className={`direction-box ${!directionText ? "fadeOut" : ""}`}>
+        <div className={`${styles["direction-box"]} ${!directionText ? styles.fadeOut : ""}`}>
           {directionText}
         </div>
       )}
       {/* if current recipient is truthy call the handleDeliveryClick otherwise link to the delivery page */}
       {currentRecipient && (
         <button
-          className="arrived-button"
+          className={styles["arrived-button"]}
           onClick={() => handleDeliveryClick()}
         >
           Delivery Successful
@@ -419,7 +419,7 @@ const DirectionsMap = ({ userLat, userLng, destinationLat, destinationLng }) => 
       )}
       {!currentRecipient && (
         <Link href="/deliver">
-          <button className="arrived-button">Arrived</button>
+          <button className={styles["arrived-button"]}>Arrived</button>
         </Link>
       )}
     </LoadScript>

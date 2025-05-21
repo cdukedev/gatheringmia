@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Home.scss";
+import styles from "./Home.module.scss";
 import NavMenu from "../../Components/HomeComponents/NavMenu/NavMenu";
 import Footer from "../../Components/HomeComponents/Footer/Footer";
 import Gallery from "../../Components/HomeComponents/Gallery/Gallery";
@@ -18,12 +18,12 @@ function Home() {
     return <Desktop />;
   } else {
     return (
-      <div className="home" data-test="home">
+      <div className={styles.home} data-test="home">
         <NavMenu navMenu={navMenu} handleNavMenu={handleNavMenu} />
-        <img className="home__logo" src={Logo} alt="logo" />
+        <img className={styles.home__logo} src={Logo} alt="logo" />
         <Gallery />
 
-        <hr className="home__hr" />
+        <hr className={styles.home__hr} />
         <AboutUs />
         <TakePart />
         <NeedHelp />

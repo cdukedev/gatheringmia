@@ -1,0 +1,83 @@
+.deliveries{
+    &__container{
+        background-image: url(../../assets/images/deliver-bar.png);
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        //add border radius to top left and right corners
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+    }
+    &__top-row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--completed{
+            margin-left: 9vw;
+            margin-top: 3vw;
+            font-size: 1.15rem;
+        }
+        &--header{
+            text-align: center;
+            margin-top: 2vw;
+            width: 85vw;
+            padding: 6vw 3vw;
+        }
+        &--recipient{
+            display: flex;
+            margin: 3vw;
+            width: 94vw;
+            height: 55%;
+            background-color: #40474C;
+            border-radius: 15px;
+            overflow: hidden;
+            perspective: 1px;
+            &--container{
+                height: 90vh;
+                overflow: auto;
+                padding-bottom: 13vh;
+            }
+            &-left{
+                width: 60%;
+                padding: 0vw 0;
+            }
+            &--item{
+                color: white;
+            }
+            &-right{
+                margin-bottom: 6.5vh;
+                padding: 1vh 0;
+                &--directions{
+                    //add link color
+                    color: #DF8363;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.top-row-button{
+    display: flex;
+    width: 94vw;
+    padding: 6vh 0;
+    background-color: #40474C;
+    border-radius: 15px;
+    font-size: larger;
+    &--text{
+        color: #DF8363;
+        padding: 0 2vh;
+    }
+}
+.amazing__container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    &-image{
+        width: 100vw;
+        padding-bottom: 6vh;
+    }
+}
