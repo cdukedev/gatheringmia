@@ -1,0 +1,55 @@
+.map-filter{
+    &__container{
+    background-image: url(../../../assets/images/map-filter-bar.svg);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 140px;
+    background-size: cover;
+}
+    &__top-row{
+        display: flex;
+        align-items: center;
+        &--header{
+            position: absolute;
+            margin-left: 9vw;
+            margin-top: 3vw;
+            font-size: 1.15rem;
+        }
+        &--arrow{
+            margin-top: 3vw;
+            width: 2rem;
+        }
+    }
+    &__bottom-container{
+        display: flex;
+        width: 94vw;
+        justify-content: space-evenly;
+        &--items{
+            display: flex;
+            justify-content: center;
+            width: 40vw;
+            align-items: center;
+            background-color: white;
+            height: 13vw;
+            margin: 3vw;
+            border-radius: 25px;
+            overflow: hidden;
+            perspective: 1px;
+            &-off{
+                background-color: #40474C;
+                color: white !important;
+            }
+        }
+        &--item{
+            margin: 0;
+            padding: 5vw 5vw 5vw 2vw;
+        }
+        &--item-text{
+            font-size: 1.15rem;
+            font-weight: medium;
+            padding-left: 5vw;
+            white-space: nowrap;
+        }
+    }
+}

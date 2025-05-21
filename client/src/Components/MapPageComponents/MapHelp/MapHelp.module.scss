@@ -1,0 +1,62 @@
+.map-help{
+    &__container{
+    background-image: url(../../../assets/images/map-help-bar.svg);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 174px;
+    background-size: cover;
+}
+    &__text{
+
+    }
+    &__top-row{
+        display: flex;
+        align-items: center;
+        &--header{
+            position: absolute;
+            margin-left: 9vw;
+            margin-top: 3vw;
+            font-size: 1.15rem;
+        }
+        &--arrow{
+            margin-top: 3vw;
+            width: 2rem;
+        }
+    }
+    &__bottom-container{
+        display: flex;
+        width: 90vw;
+        flex-wrap: wrap;
+        align-items: center;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin: 3vw 5vw;
+        &--items{
+            display: flex;
+            justify-content: flex-start;
+            width: 35vw;
+            align-items: center;
+            margin-left: 5vw;
+            padding:2vw 0 ;
+        }
+        &--item{
+            margin-left: 1vw;
+            margin: 0;
+            &-top{
+                margin-left: 1vw;
+                margin-top: 2vw;
+            }
+            &-text{
+                margin: 0;
+                margin-left: 2vw;
+                white-space:  nowrap;
+                text-align: center;
+                &-top{
+                    margin-left: 3vw;
+                }
+            }
+        }
+    }
+}
