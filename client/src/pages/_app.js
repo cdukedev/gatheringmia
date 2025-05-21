@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import '../App.css';
 import '../index.css';
 import { FoodBankProvider } from "../contexts/FoodBankContext";
@@ -15,6 +16,9 @@ export default function MyApp({ Component, pageProps }) {
         <RecipientProvider>
           <GeolocationProvider>
             <MapPageProvider>
+              <Head>
+                <title>Feed Our Community</title>
+              </Head>
               <Component {...pageProps} />
             </MapPageProvider>
           </GeolocationProvider>

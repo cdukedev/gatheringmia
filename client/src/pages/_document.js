@@ -10,7 +10,6 @@ export default function Document() {
           name="description"
           content="Web site created using create-react-app"
         />
-        <title>Feed Our Community</title>
       </Head>
       <body>
         <Main />
