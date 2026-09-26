@@ -1,0 +1,72 @@
+{
+ "hub": {
+  "id": "hub-lhanc",
+  "name": "Little Havana Activities and Nutrition Centers",
+  "address": "700 SW 8th St, Miami, FL 33130",
+  "lat": 25.7657835,
+  "lng": -80.2059883
+ },
+ "capacity": 12,
+ "routes": [
+  {
+   "name": "Route A",
+   "stop_ids": [
+    "cli-019",
+    "cli-016",
+    "cli-004",
+    "cli-008",
+    "cli-002",
+    "cli-005",
+    "cli-023",
+    "cli-021",
+    "cli-014",
+    "cli-007",
+    "cli-010",
+    "cli-022"
+   ],
+   "seconds": 1363,
+   "meters": 11034
+  },
+  {
+   "name": "Route B",
+   "stop_ids": [
+    "cli-020",
+    "cli-003",
+    "cli-015",
+    "cli-017",
+    "cli-000",
+    "cli-001",
+    "cli-013",
+    "cli-009",
+    "cli-012",
+    "cli-018",
+    "cli-011",
+    "cli-006"
+   ],
+   "seconds": 1533,
+   "meters": 13057
+  }
+ ],
+ "comparison_2022": {
+  "stop_ids": [
+   "cli-000",
+   "cli-001",
+   "cli-002",
+   "cli-003",
+   "cli-004",
+   "cli-005",
+   "cli-006",
+   "cli-007",
+   "cli-008",
+   "cli-009",
+   "cli-010",
+   "cli-011"
+  ],
+  "real_seconds": 2597,
+  "ours_seconds": 1363,
+  "pct_worse": 90.5,
+  "reported_distance_to_final_destination_miles": 1.0,
+  "note": "2022 finalDestination 24.2801423,-80.6620736 is open water ~104mi south of Miami"
+ },
+ "max_pair_asymmetry_seconds": 70
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gatheringmia" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="25.7657835" lon="-80.2059883"><name>Little Havana Activities and Nutrition Centers</name></wpt>
+  <wpt lat="25.7659907" lon="-80.2017015"><name>1. cli-020</name></wpt>
+  <wpt lat="25.7638453" lon="-80.2008998"><name>2. cli-003</name></wpt>
+  <wpt lat="25.7606806" lon="-80.2042135"><name>3. cli-015</name></wpt>
+  <wpt lat="25.7575401" lon="-80.2010725"><name>4. cli-017</name></wpt>
+  <wpt lat="25.7584424" lon="-80.1988764"><name>5. cli-000</name></wpt>
+  <wpt lat="25.7669301" lon="-80.1997158"><name>6. cli-001</name></wpt>
+  <wpt lat="25.7769576" lon="-80.2232337"><name>7. cli-013</name></wpt>
+  <wpt lat="25.7737735" lon="-80.2251001"><name>8. cli-009</name></wpt>
+  <wpt lat="25.7653488" lon="-80.2157786"><name>9. cli-012</name></wpt>
+  <wpt lat="25.7610782" lon="-80.2180708"><name>10. cli-018</name></wpt>
+  <wpt lat="25.7598237" lon="-80.2136779"><name>11. cli-011</name></wpt>
+  <wpt lat="25.7628155" lon="-80.2121998"><name>12. cli-006</name></wpt>
+  <trk><name>Route B</name><trkseg>
+      <trkpt lat="25.7657835" lon="-80.2059883"/>
+      <trkpt lat="25.7659907" lon="-80.2017015"/>
+      <trkpt lat="25.7638453" lon="-80.2008998"/>
+      <trkpt lat="25.7606806" lon="-80.2042135"/>
+      <trkpt lat="25.7575401" lon="-80.2010725"/>
+      <trkpt lat="25.7584424" lon="-80.1988764"/>
+      <trkpt lat="25.7669301" lon="-80.1997158"/>
+      <trkpt lat="25.7769576" lon="-80.2232337"/>
+      <trkpt lat="25.7737735" lon="-80.2251001"/>
+      <trkpt lat="25.7653488" lon="-80.2157786"/>
+      <trkpt lat="25.7610782" lon="-80.2180708"/>
+      <trkpt lat="25.7598237" lon="-80.2136779"/>
+      <trkpt lat="25.7628155" lon="-80.2121998"/>
+  </trkseg></trk>
+</gpx>
