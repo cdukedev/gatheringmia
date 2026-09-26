@@ -1,0 +1,43 @@
+{
+  "name": "gatheringmia",
+  "version": "0.1.0",
+  "main": "expo-router/entry",
+  "dependencies": {
+    "expo": "~57.0.15",
+    "expo-background-task": "~57.0.12",
+    "expo-constants": "~57.0.13",
+    "expo-dev-client": "~57.0.14",
+    "expo-linking": "~57.0.7",
+    "expo-localization": "~57.0.1",
+    "expo-location": "~57.0.12",
+    "expo-network": "~57.0.1",
+    "expo-router": "~57.0.15",
+    "expo-sqlite": "~57.0.1",
+    "expo-status-bar": "~57.0.1",
+    "expo-task-manager": "~57.0.12",
+    "react": "19.2.3",
+    "react-native": "0.86.2",
+    "react-native-maps": "1.27.2",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "check:pii": "node scripts/check-pii.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run check:pii && npm test"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

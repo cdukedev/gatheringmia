@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# Raw Overpass API dumps. Large, and regenerable from the committed query files
+# (seed/overpass-query.txt, seed/bldg-query.txt).
+#
+# Reproducibility is preserved without them: generate_seed.py reads
+# addresses-residential.json, which IS committed, and SEED is fixed at 20260823,
+# so seed.json regenerates byte-identical.
+buildings-raw.json
+overpass-raw.json
+addresses-raw.json

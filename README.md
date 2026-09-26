@@ -1,7 +1,22 @@
 # GatheringMIA
 
+> ## Status: dormant, being revived as a native app
+>
+> **The 2022 build is offline.** As of August 2026 every deployed surface fails DNS
+> resolution: both AWS API Gateway routes, the Amplify hosting, and `gathering-mia.live`.
+> The links further down this README are dead and are kept only as a record.
+>
+> **A full revival plan now exists in [`docs/`](docs/README.md):** a codebase audit, a
+> product divergence exercise, market research across 9 dimensions, a new PRD, and a React
+> Native architecture. Start with [`docs/README.md`](docs/README.md).
+>
+> **Two things changed in the plan.** The buyer is an Older Americans Act home-delivered
+> meals provider, not a food bank rescue program. And the "optimal route" claimed below was
+> never optimal: the distance function computed Euclidean distance on raw latitude and
+> longitude degrees, which is wrong by roughly two orders of magnitude. See
+> [`docs/00-REVIVAL-AUDIT.md`](docs/00-REVIVAL-AUDIT.md).
+
 GatheringMia
-[Click here to navigate to site](https://main.d3d9kolrqh2fvt.amplifyapp.com/)(intended to be viewed as a mobile web application)
 A mobile web application that streamlines the process for volunteers that deliver meals from foodbanks to homebound individuals, providing orted list of recipients from any chosen foodbank. The application will given pickup and delivery instructions. Once Packages are picked up from food bank location the app will provide a list of all the dropoff locations of the recipients. The directions provided will be an optimal route to ensure the volunteer drives either the least amount of time or miles.
 
 ## Project Backstory

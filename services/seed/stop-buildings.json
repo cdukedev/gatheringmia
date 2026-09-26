@@ -1,0 +1,218 @@
+[
+ {
+  "id": "cli-000",
+  "addr": "300 SW 22nd Rd, Miami, FL",
+  "dist_m": 19,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-001",
+  "addr": "720 SW 4th Ave, Miami, FL",
+  "dist_m": 13,
+  "building": "commercial",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-002",
+  "addr": "910 SW 22nd Rd, Miami, FL",
+  "dist_m": 18,
+  "building": "yes",
+  "levels": "1",
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-003",
+  "addr": "2009 W Flagler St, Miami, FL",
+  "dist_m": 8,
+  "building": "retail",
+  "levels": null,
+  "units": null,
+  "name": "Family Dollar"
+ },
+ {
+  "id": "cli-004",
+  "addr": "701 SW 27th Rd, Miami, FL",
+  "dist_m": 18,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-005",
+  "addr": "1528 SW 8th St, Miami, FL",
+  "dist_m": 10,
+  "building": "retail",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-006",
+  "addr": "1127 SW 9th St, Miami, FL",
+  "dist_m": 1,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-007",
+  "addr": "231 SW 17th Rd, Miami, FL",
+  "dist_m": 18,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-008",
+  "addr": "876 SW 8th St, Miami, FL",
+  "dist_m": 9,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-009",
+  "addr": "421 SW 20th Rd, Miami, FL",
+  "dist_m": 10,
+  "building": "house",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-010",
+  "addr": "1775 SW 3rd Ave, Miami, FL",
+  "dist_m": 29,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-011",
+  "addr": "953 SW 10th St, Miami, FL",
+  "dist_m": 4,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-012",
+  "addr": "1771 W Flagler St, Miami, FL",
+  "dist_m": 19,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-013",
+  "addr": "256 SW 12th St, Miami, FL",
+  "dist_m": 49,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-014",
+  "addr": "1153 SW 13th Ct, Miami, FL",
+  "dist_m": 14,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-015",
+  "addr": "55 SW 20th Rd, Miami, FL",
+  "dist_m": 14,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-016",
+  "addr": "1135 SW 11th St, Miami, FL",
+  "dist_m": 8,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-017",
+  "addr": "152 NW 17th Pl, Miami, FL",
+  "dist_m": 18,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-018",
+  "addr": "1001 SW 8th Ct, Miami, FL",
+  "dist_m": 4,
+  "building": "house",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-019",
+  "addr": "1245 SW 15th St, Miami, FL",
+  "dist_m": 14,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-020",
+  "addr": "1740 NW 5th St, Miami, FL",
+  "dist_m": 1,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-021",
+  "addr": "1290 SW 8th St, Miami, FL",
+  "dist_m": 11,
+  "building": "retail",
+  "levels": "1",
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-022",
+  "addr": "481 SW 10th St, Miami, FL",
+  "dist_m": 2,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ },
+ {
+  "id": "cli-023",
+  "addr": "368 SW 11th St, Miami, FL",
+  "dist_m": 3,
+  "building": "yes",
+  "levels": null,
+  "units": null,
+  "name": null
+ }
+]

@@ -1,0 +1,13 @@
+seq,stop_id,address,osm_building,arrival_time,curb_to_door_seconds,parking,door_obvious,seeded_facts_verdict,missing_facts,signal_bars,sequence_error,notes
+1,cli-020,"444 SW 8th St, Miami, FL",yes,,,,,,,,,
+2,cli-003,"1020 SW 4th Ave, Miami, FL",yes,,,,,,,,,
+3,cli-015,"421 SW 20th Rd, Miami, FL",house,,,,,,,,,
+4,cli-017,"144 SW 19th Rd, Miami, FL",yes,,,,,,,,,
+5,cli-000,"1760 SW 1st Ave, Miami, FL",yes,,,,,,,,,
+6,cli-001,"324 SW 7th St, Miami, FL",yes,,,,,,,,,
+7,cli-013,"1712 NW 4th St, Miami, FL",yes,,,,,,,,,
+8,cli-009,"50 NW 18th Ave, Miami, FL",yes,,,,,,,,,
+9,cli-012,"822 SW 12th Ct, Miami, FL",yes,,,,,,,,,
+10,cli-018,"1243 SW 14th Ave, Miami, FL",yes,,,,,,,,,
+11,cli-011,"1435 SW 12th Ave, Miami, FL",yes,,,,,,,,,
+12,cli-006,"1038 SW 11th St, Miami, FL",yes,,,,,,,,,
