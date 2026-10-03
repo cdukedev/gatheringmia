@@ -1,12 +1,12 @@
 import React from "react";
-import "./ContactSection.scss";
+import styles from "./ContactSection.module.scss";
 
 const ContactSection = ({ title, content, email }) => {
   return (
     <>
-      <section className="contact__content-items" data-testid="contact-section">
+      <section className={styles["contact__content-items"]} data-testid="contact-section">
         <span
-          className="contact__content-item contact__content-item--bold"
+          className={`${styles["contact__content-item"]} ${styles["contact__content-item--bold"]}`}
           data-testid="contact-section-title"
         >
           {title}
@@ -15,21 +15,21 @@ const ContactSection = ({ title, content, email }) => {
         {content.map((item, index) => (
           <span
             key={index}
-            className="contact__content-item"
+            className={styles["contact__content-item"]}
             data-testid="contact-section-content"
           >
             {item}
           </span>
         ))}
         {email && (
-          <span className="contact__content-item" data-testid="contact-email">
-            <a className="contact__content-item--link" href={`mailto:${email}`}>
+          <span className={styles["contact__content-item"]} data-testid="contact-email">
+            <a className={styles["contact__content-item--link"]} href={`mailto:${email}`}>
               {email}
             </a>
           </span>
         )}
       </section>
-      <hr className="contact__hr" />
+      <hr className={styles["contact__hr"]} />
     </>
   );
 };

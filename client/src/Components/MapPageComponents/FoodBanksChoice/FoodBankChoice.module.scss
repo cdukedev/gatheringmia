@@ -1,0 +1,56 @@
+.map-deliveries{
+    &__container{
+        background-image: url(../../../assets/images/map-filter-bar.svg);
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 360px;
+        background-size: cover;
+        //add border radius to top left and right corners
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+    }
+    &__top-row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--arrow{
+            margin-top: 3vw;
+            width: 2rem;
+        }
+        &--header{
+            text-align: center;
+            margin-top: 2vw;
+        }
+        &--food-bank{
+            display: flex;
+            margin: 3vw;
+            width: 94vw;
+            height: 55%;
+            background-color: #40474C;
+            border-radius: 15px;
+            overflow: hidden;
+            perspective: 1px;
+            &--container{
+                height: 270px;
+                overflow: auto;
+            }
+            &-left{
+                width: 60%;
+                padding: 2vw 0;
+            }
+            &--item{
+                color: white;
+            }
+            &-right{
+                margin-bottom: 6.5vh;
+                padding: 2vw 0;
+                &--directions{
+                    //add link color
+                    color: #DF8363;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -9,6 +9,7 @@ function RecipientsList({ coords, setDestination }) {
     <>
       {sortedRecipients.map((recipient) => (
         <Recipient
+          key={recipient.id}
           setDestination={setDestination}
           recipient={recipient}
           coords={coords}

@@ -1,16 +1,18 @@
 import BackButton from "./BackButton";
 import React from "react";
-import { MemoryRouter } from "react-router-dom";
 import { mount } from "enzyme";
 import Enzyme from "enzyme";
 import Adapter from "@cfaester/enzyme-adapter-react-18";
 Enzyme.configure({ adapter: new Adapter() });
 
-const wrapper = mount(
-  <MemoryRouter>
-    <BackButton />
-  </MemoryRouter>
-);
+// Mock next/link
+jest.mock('next/link', () => {
+  return ({ children, href }) => {
+    return React.cloneElement(children, { href });
+  };
+});
+
+const wrapper = mount(<BackButton />);
 
 it("test_back_button_is_clickable", () => {
   expect(wrapper.find("Link")).toHaveLength(1);
@@ -18,13 +20,12 @@ it("test_back_button_is_clickable", () => {
 
 // Tests that clicking the button navigates to the home page ("/").
 it("test_back_button_navigates_home", () => {
-  wrapper.find("Link").simulate("click");
-  expect(wrapper.find("Link").prop("to")).toEqual("/");
+  expect(wrapper.find("Link").prop("href")).toEqual("/");
 });
 
-// Tests that the Link component has a "to" prop with value "/".
+// Tests that the Link component has a "href" prop with value "/".
 it("test_back_button_no_additional_props", () => {
-  expect(wrapper.find("Link").prop("to")).toEqual("/");
+  expect(wrapper.find("Link").prop("href")).toEqual("/");
 });
 
 // Tests that the function renders a div with class "back-button".

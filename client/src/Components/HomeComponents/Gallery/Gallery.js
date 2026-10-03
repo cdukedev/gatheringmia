@@ -8,7 +8,7 @@ import Image6 from "../../../assets/images/gallery/image6small.jpg";
 import Image7 from "../../../assets/images/gallery/image7.jpg";
 import Image8 from "../../../assets/images/gallery/image8small.jpg";
 
-import "./Gallery.scss";
+import styles from "./Gallery.module.scss";
 import GalleryColumn from "./GalleryColumn";
 
 const columnOneImages = [
@@ -27,8 +27,8 @@ const columnTwoImages = [
 
 function Gallery() {
   return (
-    <div className="gallery">
-      <div className="gallery__columns">
+    <div className={styles.gallery}>
+      <div className={styles["gallery__columns"]}>
         <GalleryColumn data-testid="gallery-column" images={columnOneImages} />
         <GalleryColumn data-testid="gallery-column" images={columnTwoImages} />
       </div>

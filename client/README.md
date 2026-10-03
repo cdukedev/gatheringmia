@@ -4,6 +4,37 @@ GatheringMia
 [Click here to navigate to site](https://main.d3d9kolrqh2fvt.amplifyapp.com/)(intended to be viewed as a mobile web application)
 A mobile web application that streamlines the process for volunteers that deliver meals from foodbanks to homebound individuals, providing orted list of recipients from any chosen foodbank. The application will given pickup and delivery instructions. Once Packages are picked up from food bank location the app will provide a list of all the dropoff locations of the recipients. The directions provided will be an optimal route to ensure the volunteer drives either the least amount of time or miles.
 
+## Next.js Version
+
+This application has been migrated from Create React App to Next.js. The application functionality remains the same, but now leverages the benefits of Next.js including improved performance, server-side rendering capabilities, and simplified routing.
+
+### Running the Application
+
+1. Install dependencies:
+```
+npm install
+```
+
+2. Create `.env.local` file with environment variables:
+```
+NEXT_PUBLIC_GOOGLE_API_KEY=your_google_api_key
+```
+
+3. Run the development server:
+```
+npm run dev
+```
+
+4. Build for production:
+```
+npm run build
+```
+
+5. Start production server:
+```
+npm start
+```
+
 ## Project Backstory
 
 This was a 2 week long project built during my fourth module at Brainstation Web Development Bootcamp. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.

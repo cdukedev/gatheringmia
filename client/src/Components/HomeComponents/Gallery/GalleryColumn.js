@@ -1,17 +1,18 @@
 import React from "react";
+import styles from "./Gallery.module.scss";
 
 function GalleryColumn({ images, ...props }) {
   return (
-    <div className="gallery__column" {...props}>
+    <div className={styles["gallery__column"]} {...props}>
       {images.map((image, index) => (
-        <div key={index} className="gallery__item">
+        <div key={index} className={styles["gallery__item"]}>
           {image.text && (
-            <span className="gallery__item-text">{image.text}</span>
+            <span className={styles["gallery__item-text"]}>{image.text}</span>
           )}
           <img
             src={image.src}
             alt={image.alt}
-            className="gallery__item-image"
+            className={styles["gallery__item-image"]}
           />
         </div>
       ))}

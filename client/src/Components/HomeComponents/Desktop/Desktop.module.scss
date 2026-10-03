@@ -1,0 +1,31 @@
+.desktop{
+    background-color: #323232;
+    margin: 0%;
+    height: 100%;
+    &-logo{
+        width:13vh;
+        &__container{
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        }
+    }
+    &-content{
+        color: white;
+        margin-top: 10vh;
+        font-size: 1.5rem;
+        margin-bottom: 10vh;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width:60vw;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-qr{
+        width: 40vh;
+        height: 40vh;
+    }
+}
